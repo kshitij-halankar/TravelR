@@ -5,6 +5,8 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -12,6 +14,8 @@ public class HomeScreen extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+
+    private Button menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,5 +31,13 @@ public class HomeScreen extends AppCompatActivity {
         homeViewPageAdapter.addFragment(new MyTripsFragment(),"My Trips");
         homeViewPageAdapter.addFragment(new UtiltiesFragment(),"Utilities");
         viewPager.setAdapter(homeViewPageAdapter);
+
+        menu=findViewById(R.id.menu);
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 }
