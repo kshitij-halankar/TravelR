@@ -14,6 +14,27 @@
         android:theme="@style/Theme.Design.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".TravelJournal"
+            android:exported="false" />
+        <activity
+            android:name=".TravelTips"
+            android:exported="false" />
+        <activity
+            android:name=".DistanceConvertor"
+            android:exported="false" />
+        <activity
+            android:name=".WeightConvertor"
+            android:exported="false" />
+        <activity
+            android:name=".VolumeConvertor"
+            android:exported="false" />
+        <activity
+            android:name=".CurrencyConvertor"
+            android:exported="false" />
+        <activity
+            android:name=".WorldClock"
+            android:exported="false" />
+        <activity
             android:name=".HomeScreen"
             android:exported="false" />
         <activity

@@ -19,6 +19,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="48dp"
+        android:layout_height="49dp"
+        android:background="#018786"
+        app:srcCompat="@drawable/ic_menu"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="4dp" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/hometabs"
         android:layout_width="0dp"
@@ -59,14 +68,5 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
     </androidx.viewpager.widget.ViewPager>
-
-    <Button
-        android:id="@+id/menu"
-        android:layout_width="77dp"
-        android:layout_height="42dp"
-        android:background="#00FFFFFF"
-        android:text="Menu"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="6dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

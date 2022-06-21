@@ -3,17 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/activity_home_screen.xml" value="0.2" />
+        <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/activity_currency_convertor.xml" value="0.17300724637681159" />
+        <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/activity_distance_convertor.xml" value="0.17300724637681159" />
+        <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/activity_home_screen.xml" value="0.264" />
         <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/activity_menu.xml" value="0.17300724637681159" />
         <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/activity_startup.xml" value="0.264" />
+        <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/activity_travel_journal.xml" value="0.17300724637681159" />
+        <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/activity_travel_tips.xml" value="0.17300724637681159" />
+        <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/activity_volume_convertor.xml" value="0.17300724637681159" />
+        <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/activity_weight_convertor.xml" value="0.17300724637681159" />
+        <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/activity_world_clock.xml" value="0.2" />
         <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/app_bar_menu.xml" value="0.17300724637681159" />
         <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/content_menu.xml" value="0.17300724637681159" />
         <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/fragment_home.xml" value="0.17300724637681159" />
         <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/fragment_my_trips.xml" value="0.17300724637681159" />
         <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/fragment_planner.xml" value="0.17300724637681159" />
         <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/fragment_slideshow.xml" value="0.17300724637681159" />
-        <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/fragment_utilties.xml" value="0.17300724637681159" />
+        <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/fragment_utilties.xml" value="0.264" />
         <entry key="..\:/Projects/TravelR/TravelR/TravelR/app/src/main/res/layout/nav_header_menu.xml" value="0.17300724637681159" />
       </map>
     </option>
