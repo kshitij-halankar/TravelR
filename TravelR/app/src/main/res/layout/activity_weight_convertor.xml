@@ -10,12 +10,12 @@
         android:id="@+id/weightconvertortext"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="38dp"
+        android:layout_marginBottom="148dp"
         android:fontFamily="@font/lobster"
         android:gravity="center"
         android:text="Weight Convertor"
         android:textSize="55sp"
-        app:layout_constraintBottom_toTopOf="@+id/enterweighttext"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,38 +24,38 @@
         android:id="@+id/weightconvertbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="47dp"
+        android:layout_marginBottom="327dp"
+        android:onClick="weightConvert"
         android:text="Convert"
-        app:layout_constraintBottom_toTopOf="@+id/weightoutput"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputweight" />
+        app:layout_constraintTop_toBottomOf="@+id/weightoutput" />
 
     <TextView
         android:id="@+id/enterweighttext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="12dp"
         android:text="Enter Weight"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/inputweight"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weightconvertortext" />
 
     <EditText
         android:id="@+id/inputweight"
-        android:layout_width="294dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="166dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="113dp"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
         android:text="Weight"
-        app:layout_constraintBottom_toTopOf="@+id/weightconvertbutton"
+        app:layout_constraintBottom_toTopOf="@+id/weightoutput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enterweighttext" />
@@ -64,11 +64,38 @@
         android:id="@+id/weightoutput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="216dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
         android:text=""
         android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/weightconvertbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputweight" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="363dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="442dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weightconvertbutton" />
+        app:layout_constraintTop_toBottomOf="@+id/weightconvertortext">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="AutoCompleteTextView" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
