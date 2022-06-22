@@ -3,27 +3,62 @@ package com.kshitijcan.travelr;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.renderscript.ScriptGroup;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.kshitijcan.travelr.databinding.ActivityMainBinding;
+import com.kshitijcan.travelr.databinding.ActivityWeightConvertorBinding;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class WeightConvertor extends AppCompatActivity {
+
+    ActivityWeightConvertorBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weight_convertor);
+        binding=ActivityWeightConvertorBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+//        setContentView(R.layout.activity_weight_convertor);
+        List<String> weightConvertTypes = new ArrayList<>();
+        weightConvertTypes.add("Grams to Carats");
+        weightConvertTypes.add("Carats to Grams");
+        weightConvertTypes.add("Grams to Kilograms");
+        weightConvertTypes.add("Kilograms to Grams");
+        weightConvertTypes.add("Grams to Ounces");
+        weightConvertTypes.add("Ounces to Grams");
+        weightConvertTypes.add("Grams to Pounds");
+        weightConvertTypes.add("Pounds to Grams");
+        weightConvertTypes.add("Tons to Kilograms");
+        weightConvertTypes.add("Kilograms to Tons");
+        weightConvertTypes.add("Tons to Pounds");
+        weightConvertTypes.add("Pounds to Tons");
+        weightConvertTypes.add("Kilograms to Pounds");
+        weightConvertTypes.add("Pounds to Kilograms");
+        weightConvertTypes.add("Ounces to Pounds");
+        weightConvertTypes.add("Pounds to Ounces");
+        ArrayAdapter adapter=new ArrayAdapter(this,R.layout.list_item,weightConvertTypes);
+        binding.weightconverttype.setAdapter(adapter);
     }
 
     public void weightConvert(View v){
         EditText weight=(EditText) findViewById(R.id.inputweight);
 //        EditText convertType=(EditText) findViewById(R.id.inputweight);
         TextView convertedWeight=(TextView) findViewById(R.id.weightoutput);
-        convertedWeight.setText(convert(Double.parseDouble(weight.getText().toString()),"Kilograms to Grams"));
+        AutoCompleteTextView convertType=(AutoCompleteTextView) findViewById(R.id.weightconverttype);
+//        convertedWeight.setText(convert(Double.parseDouble(weight.getText().toString()),"Kilograms to Grams"));
+        convertedWeight.setText(convert(Double.parseDouble(weight.getText().toString()),convertType.getText().toString()));
     }
 
     private String convert(double weight, String convertType){
         String convertedWeight="";
+        System.out.println(" Inside "+convertType);
         switch(convertType){
             case "Grams to Carats":
                 convertedWeight=gramToCarat(weight)+" Ct";

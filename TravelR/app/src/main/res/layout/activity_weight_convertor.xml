@@ -1,101 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WeightConvertor">
+    tools:context=".WeightConvertor"
+    android:layout_margin="25dp">
 
     <TextView
         android:id="@+id/weightconvertortext"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="148dp"
         android:fontFamily="@font/lobster"
         android:gravity="center"
+        android:padding="6dp"
         android:text="Weight Convertor"
-        android:textSize="55sp"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="50sp" />
 
-    <Button
-        android:id="@+id/weightconvertbutton"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/weighttextinputlayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="327dp"
-        android:onClick="weightConvert"
-        android:text="Convert"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weightoutput" />
+        android:layout_below="@id/weightconvertortext"
+        android:layout_marginTop="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
-    <TextView
-        android:id="@+id/enterweighttext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginBottom="12dp"
-        android:text="Enter Weight"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/inputweight"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weightconvertortext" />
+        <AutoCompleteTextView
+            android:id="@+id/weightconverttype"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="Select Conversion Type" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
         android:id="@+id/inputweight"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="58dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginBottom="113dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weighttextinputlayout"
+        android:layout_marginTop="30dp"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:text="Weight"
-        app:layout_constraintBottom_toTopOf="@+id/weightoutput"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterweighttext" />
-
-    <TextView
-        android:id="@+id/weightoutput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
         android:text=""
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/weightconvertbutton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputweight" />
+        android:hint="Enter Weight Here"/>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="363dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="442dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weightconvertortext">
-
-        <com.google.android.material.textfield.TextInputLayout
+        <TextView
+            android:id="@+id/weightoutput"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textSize="25sp"
+            android:layout_below="@id/inputweight"
+            android:layout_marginTop="20dp"
+            android:foregroundGravity="center"/>
 
-            <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_weight="1"
-                android:text="AutoCompleteTextView" />
+    <Button
+            android:id="@+id/weightconvertbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="weightConvert"
+            android:text="Convert"
+        android:layout_below="@id/weightoutput"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
 
-        </com.google.android.material.textfield.TextInputLayout>
-    </RelativeLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
