@@ -56,7 +56,7 @@
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:text=""
-        android:textSize="20sp"
+        android:textSize="25sp"
         tools:layout_editor_absoluteY="444dp" />
 
     <androidx.appcompat.widget.AppCompatButton
