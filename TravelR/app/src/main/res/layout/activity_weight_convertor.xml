@@ -46,26 +46,26 @@
         android:text=""
         android:hint="Enter Weight Here"/>
 
-        <TextView
-            android:id="@+id/weightoutput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text=""
-            android:textSize="25sp"
-            android:layout_below="@id/inputweight"
-            android:layout_marginTop="20dp"
-            android:foregroundGravity="center"/>
+    <TextView
+        android:id="@+id/weightoutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputweight"
+        android:layout_marginTop="20dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text=""
+        android:textSize="25sp" />
 
     <Button
-            android:id="@+id/weightconvertbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="weightConvert"
-            android:text="Convert"
+        android:id="@+id/weightconvertbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/weightoutput"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"/>
+        android:onClick="weightConvert"
+        android:text="Convert" />
 
 
 </RelativeLayout>

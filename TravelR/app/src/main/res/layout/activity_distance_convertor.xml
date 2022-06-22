@@ -1,72 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="25dp"
+    android:backgroundTint="#C83030"
     tools:context=".DistanceConvertor">
 
     <TextView
         android:id="@+id/distanceconvertortext"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="91dp"
         android:fontFamily="@font/lobster"
         android:gravity="center"
+        android:padding="6dp"
         android:text="Distance Convertor"
-        android:textSize="55sp"
-        app:layout_constraintBottom_toTopOf="@+id/enterdistancetext"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="48sp" />
 
-    <TextView
-        android:id="@+id/enterdistancetext"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/distancetextinputlayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginBottom="44dp"
-        android:fontFamily="@font/lobster"
-        android:text="Enter Distance"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/distanceinput"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/distanceconvertortext" />
+        android:layout_below="@id/distanceconvertortext"
+        android:layout_marginTop="10dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/distanceconverttype"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="Select Conversion Type" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
         android:id="@+id/distanceinput"
-        android:layout_width="308dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="49dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Distance"
-        app:layout_constraintBottom_toTopOf="@+id/distanceconvertbutton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterdistancetext" />
-
-    <Button
-        android:id="@+id/distanceconvertbutton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="98dp"
-        android:layout_marginBottom="30dp"
-        android:text="Convert"
-        app:layout_constraintBottom_toTopOf="@+id/distanceoutput"
-        app:layout_constraintStart_toStartOf="@+id/distanceinput"
-        app:layout_constraintTop_toBottomOf="@+id/distanceinput" />
+        android:layout_below="@id/distancetextinputlayout"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Enter Distance Here"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="255dp" />
 
     <TextView
         android:id="@+id/distanceoutput"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="268dp"
+        android:layout_below="@id/distanceinput"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/distanceconvertbutton" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textSize="20sp"
+        tools:layout_editor_absoluteY="444dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/distanceconvertbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distanceoutput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#635555"
+        android:onClick="distanceConvert"
+        android:text="Convert"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="366dp" />
+</RelativeLayout>
