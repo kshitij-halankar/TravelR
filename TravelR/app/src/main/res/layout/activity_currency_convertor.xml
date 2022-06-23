@@ -14,17 +14,26 @@
         android:fontFamily="@font/lobster"
         android:gravity="center"
         android:text="Currency Converter"
-        android:textSize="48sp"
+        android:textSize="45sp"
         tools:layout_editor_absoluteY="16dp" />
 
+    <TextView
+        android:id="@+id/convertFromText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert From"
+        android:layout_below="@id/currencyconvertertext"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/firstcurrencytextinputlayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/currencyconvertertext"
-        android:layout_marginTop="30dp">
+        android:layout_below="@id/convertFromText"
+        android:layout_marginTop="5dp">
 
         <AutoCompleteTextView
             android:id="@+id/firstcurrencytype"
@@ -32,17 +41,26 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:inputType="none"
-            android:text="Select First Currency" />
+            android:text="Select Currency" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/convertToText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert To"
+        android:layout_below="@id/firstcurrencytextinputlayout"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/secondcurrencytextinputlayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/firstcurrencytextinputlayout"
-        android:layout_marginTop="30dp">
+        android:layout_below="@id/convertToText"
+        android:layout_marginTop="5dp">
 
         <AutoCompleteTextView
             android:id="@+id/secondcurrencytype"
@@ -50,7 +68,7 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:inputType="none"
-            android:text="Select Second Currency" />
+            android:text="Select Currency" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
@@ -61,16 +79,26 @@
         android:inputType="number"
         android:text=""
         android:layout_below="@+id/secondcurrencytextinputlayout"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:hint="Enter Amount Here"
+        android:textSize="25sp"
         tools:layout_editor_absoluteX="47dp" />
+
+    <TextView
+        android:id="@+id/conversionrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currencyinput"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:text="Converted Amount" />
 
     <TextView
         android:id="@+id/currencyoutput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/currencyinput"
-        android:layout_marginTop="30dp"
+        android:layout_below="@+id/conversionrate"
+        android:layout_marginTop="5dp"
         android:textSize="25sp"
         android:text="" />
 
@@ -78,10 +106,13 @@
         android:id="@+id/convertcurrencybutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Convert"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/currencyoutput"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
+        android:onClick="convertCurrency"
+        android:padding="15dp"
+        android:text="Convert"
+        android:textSize="25dp"
         tools:layout_editor_absoluteX="154dp" />
 
 </RelativeLayout>
