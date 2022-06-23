@@ -8,12 +8,12 @@
     android:padding="25dp">
 
     <TextView
-        android:id="@+id/volumeconvertortext"
+        android:id="@+id/volumeconvertertext"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lobster"
         android:gravity="center"
-        android:text="Volume Convertor"
+        android:text="Volume Converter"
         android:textSize="50sp" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -21,7 +21,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/volumeconvertortext"
+        android:layout_below="@id/volumeconvertertext"
         android:layout_marginTop="30dp">
 
         <AutoCompleteTextView
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text=""
         android:layout_below="@+id/volumetextinputlayout"
         android:layout_marginTop="30dp"

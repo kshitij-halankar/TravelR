@@ -8,20 +8,20 @@
     android:layout_margin="25dp">
 
     <TextView
-        android:id="@+id/weightconvertortext"
+        android:id="@+id/weightconvertertext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lobster"
         android:gravity="center"
         android:padding="6dp"
-        android:text="Weight Convertor"
+        android:text="Weight Converter"
         android:textSize="50sp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/weighttextinputlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/weightconvertortext"
+        android:layout_below="@id/weightconvertertext"
         android:layout_marginTop="10dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
@@ -42,7 +42,7 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:gravity="center"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text=""
         android:hint="Enter Weight Here"/>
 

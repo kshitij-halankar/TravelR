@@ -9,13 +9,13 @@
     tools:context=".DistanceConvertor">
 
     <TextView
-        android:id="@+id/distanceconvertortext"
+        android:id="@+id/distanceconvertertext"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lobster"
         android:gravity="center"
         android:padding="6dp"
-        android:text="Distance Convertor"
+        android:text="Distance Converter"
         android:textSize="48sp" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -23,7 +23,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/distanceconvertortext"
+        android:layout_below="@id/distanceconvertertext"
         android:layout_marginTop="10dp">
 
         <AutoCompleteTextView
@@ -43,7 +43,7 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Enter Distance Here"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text=""
         tools:layout_editor_absoluteX="52dp"
         tools:layout_editor_absoluteY="255dp" />
