@@ -1,7 +1,9 @@
 package com.kshitijcan.travelr;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -10,7 +12,7 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link PlannerFragment#newInstance} factory method to
+ * Use the {@link PlannerFragment} factory method to
  * create an instance of this fragment.
  */
 public class PlannerFragment extends Fragment {
@@ -55,10 +57,44 @@ public class PlannerFragment extends Fragment {
 //        }
 //    }
 
+    AppCompatButton travelPlanner, bucketList, plannerGuide;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_planner, container, false);
+//        return inflater.inflate(R.layout.fragment_planner, container, false);
+        View view=inflater.inflate(R.layout.fragment_planner, container, false);
+
+        travelPlanner=view.findViewById(R.id.plantripbutton);
+        travelPlanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(),TravelPlanner.class);
+                startActivity(intent);
+            }
+        });
+
+        bucketList=view.findViewById(R.id.bucketlistbutton);
+        bucketList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(),BucketList.class);
+                startActivity(intent);
+            }
+        });
+
+        plannerGuide=view.findViewById(R.id.howtoplanbutton);
+        plannerGuide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(),PlannerGuide.class);
+                startActivity(intent);
+            }
+        });
+
+
+        return view;
+
     }
 }
