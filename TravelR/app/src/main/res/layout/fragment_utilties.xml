@@ -29,7 +29,7 @@
                 app:layout_constraintVertical_bias="0.026" />
 
             <TextView
-                android:id="@+id/worldmaptext"
+                android:id="@+id/plantriptext"
                 android:layout_width="178dp"
                 android:layout_height="74dp"
                 android:layout_marginStart="16dp"
@@ -151,9 +151,9 @@
                 android:background="#00FFFFFF"
                 android:scaleType="fitCenter"
                 android:src="@drawable/tips"
-                app:layout_constraintEnd_toEndOf="@+id/worldmaptext"
-                app:layout_constraintStart_toStartOf="@+id/worldmaptext"
-                app:layout_constraintTop_toBottomOf="@+id/worldmaptext" />
+                app:layout_constraintEnd_toEndOf="@+id/plantriptext"
+                app:layout_constraintStart_toStartOf="@+id/plantriptext"
+                app:layout_constraintTop_toBottomOf="@+id/plantriptext" />
 
             <ImageButton
                 android:id="@+id/journalbutton"
