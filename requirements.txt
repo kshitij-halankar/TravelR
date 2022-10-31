@@ -1,0 +1,51 @@
+select dates
+add destination country
+select number of people traveling
+add places to visit
+add activities
+add estimated expense
+
+
+select dates
+add destination country
+select number of travellers
+select number of cities to be visited
+	number
+select estimated expense
+click next
+
+for each city
+	stay days
+	places to visit
+	activities
+	food
+	hotels
+	transport
+	notes
+	contact info of person/hotel
+	next to add city
+	click done
+	
+access trip in my trip to add
+	flight details
+	documents
+		passport
+		visa
+		reservations hotels, transport, etc.
+		vaccine
+		
+	packing list
+		outfit planner
+		quantity
+		essentials
+		makeup
+		toiletry
+		seasonals
+		
+	budget
+		travel
+		stay
+		shopping
+		
+	download itinerary
+	

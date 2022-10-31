@@ -1,5 +1,6 @@
 package com.kshitijcan.travelr;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -17,11 +18,16 @@ public class HomeScreen extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
+    private AlertDialog.Builder dialogBuilder;
+    private AlertDialog dialog;
+    private Button ok;
+
     private ImageButton menu, worldMap, worldClock, travelTips, travelJournal, currencyConvertor, weightConvertor, distanceConvertor, volumeConvertor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        createPopupDialog();
         setContentView(R.layout.activity_home_screen);
         tabLayout=findViewById(R.id.hometabs);
         viewPager=findViewById(R.id.homeviewpager);
@@ -43,5 +49,21 @@ public class HomeScreen extends AppCompatActivity {
         });
 
 
+    }
+
+    public void createPopupDialog(){
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View popupView = getLayoutInflater().inflate(R.layout.popup, null);
+        ok = (Button) popupView.findViewById(R.id.okbutton);
+        dialogBuilder.setView(popupView);
+        dialog = dialogBuilder.create();
+        dialog.show();
+
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
     }
 }

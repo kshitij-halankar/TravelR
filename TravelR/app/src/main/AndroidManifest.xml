@@ -16,6 +16,9 @@
         android:theme="@style/Theme.MaterialComponents.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".HappyBirthday"
+            android:exported="false" />
+        <activity
             android:name=".PlannerGuide"
             android:exported="false" />
         <activity
