@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".UtiltiesFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/worldmapbutton"
+                android:layout_width="178dp"
+                android:layout_height="171dp"
+                android:layout_marginStart="16dp"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/map"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.026" />
+
+            <TextView
+                android:id="@+id/plantriptext"
+                android:layout_width="178dp"
+                android:layout_height="74dp"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/lobster"
+                android:gravity="center"
+                android:text="World Map"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/worldmapbutton" />
+
+            <TextView
+                android:id="@+id/traveltipstext"
+                android:layout_width="178dp"
+                android:layout_height="82dp"
+                android:fontFamily="@font/lobster"
+                android:gravity="center"
+                android:text="Travel Tips"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@+id/traveltipsbutton"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/worldmapbutton"
+                app:layout_constraintTop_toBottomOf="@+id/traveltipsbutton" />
+
+            <TextView
+                android:id="@+id/currencytext"
+                android:layout_width="178dp"
+                android:layout_height="82dp"
+                android:fontFamily="@font/lobster"
+                android:gravity="center"
+                android:text="Currency Convertor"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@+id/currencybutton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/currencybutton"
+                app:layout_constraintTop_toBottomOf="@+id/currencybutton" />
+
+            <TextView
+                android:id="@+id/distancetext"
+                android:layout_width="178dp"
+                android:layout_height="82dp"
+                android:fontFamily="@font/lobster"
+                android:gravity="center"
+                android:text="Distance Convertor"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@+id/distancebutton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/distancebutton"
+                app:layout_constraintTop_toBottomOf="@+id/distancebutton" />
+
+            <TextView
+                android:id="@+id/volumetext"
+                android:layout_width="178dp"
+                android:layout_height="82dp"
+                android:fontFamily="@font/lobster"
+                android:gravity="center"
+                android:text="Volume Convertor"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@+id/volumebutton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/volumebutton"
+                app:layout_constraintTop_toBottomOf="@+id/volumebutton" />
+
+            <TextView
+                android:id="@+id/weighttext"
+                android:layout_width="178dp"
+                android:layout_height="82dp"
+                android:fontFamily="@font/lobster"
+                android:gravity="center"
+                android:text="Weight Convertor"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@+id/weightbutton"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/weightbutton"
+                app:layout_constraintTop_toBottomOf="@+id/weightbutton" />
+
+            <TextView
+                android:id="@+id/traveljournal"
+                android:layout_width="178dp"
+                android:layout_height="82dp"
+                android:fontFamily="@font/lobster"
+                android:gravity="center"
+                android:text="Travel Journal"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@+id/journalbutton"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/journalbutton"
+                app:layout_constraintTop_toBottomOf="@+id/journalbutton" />
+
+            <TextView
+                android:id="@+id/worldclocktext"
+                android:layout_width="179dp"
+                android:layout_height="74dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/lobster"
+                android:gravity="center"
+                android:text="World Clock"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/worldclockbutton" />
+
+            <ImageButton
+                android:id="@+id/worldclockbutton"
+                android:layout_width="178dp"
+                android:layout_height="171dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/time"
+                app:layout_constraintBottom_toTopOf="@+id/worldclocktext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldmapbutton"
+                app:layout_constraintTop_toTopOf="@+id/worldmapbutton" />
+
+            <ImageButton
+                android:id="@+id/traveltipsbutton"
+                android:layout_width="178dp"
+                android:layout_height="171dp"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tips"
+                app:layout_constraintEnd_toEndOf="@+id/plantriptext"
+                app:layout_constraintStart_toStartOf="@+id/plantriptext"
+                app:layout_constraintTop_toBottomOf="@+id/plantriptext" />
+
+            <ImageButton
+                android:id="@+id/journalbutton"
+                android:layout_width="178dp"
+                android:layout_height="171dp"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/journal"
+                app:layout_constraintEnd_toEndOf="@+id/worldclocktext"
+                app:layout_constraintStart_toStartOf="@+id/worldclocktext"
+                app:layout_constraintTop_toBottomOf="@+id/worldclocktext" />
+
+            <ImageButton
+                android:id="@+id/currencybutton"
+                android:layout_width="178dp"
+                android:layout_height="171dp"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/currency"
+                app:layout_constraintEnd_toEndOf="@+id/traveltipstext"
+                app:layout_constraintStart_toStartOf="@+id/traveltipstext"
+                app:layout_constraintTop_toBottomOf="@+id/traveltipstext" />
+
+            <ImageButton
+                android:id="@+id/weightbutton"
+                android:layout_width="178dp"
+                android:layout_height="171dp"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/weight"
+                app:layout_constraintEnd_toEndOf="@+id/traveljournal"
+                app:layout_constraintTop_toBottomOf="@+id/traveljournal" />
+
+            <ImageButton
+                android:id="@+id/distancebutton"
+                android:layout_width="178dp"
+                android:layout_height="171dp"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/distance"
+                app:layout_constraintTop_toBottomOf="@+id/currencytext"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <ImageButton
+                android:id="@+id/volumebutton"
+                android:layout_width="178dp"
+                android:layout_height="171dp"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/volume"
+                app:layout_constraintEnd_toEndOf="@+id/weighttext"
+                app:layout_constraintStart_toStartOf="@+id/weighttext"
+                app:layout_constraintTop_toBottomOf="@+id/weighttext" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VolumeConvertor"
+    android:padding="25dp">
+
+    <TextView
+        android:id="@+id/volumeconvertertext"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster"
+        android:gravity="center"
+        android:text="Volume Converter"
+        android:textSize="50sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/volumetextinputlayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/volumeconvertertext"
+        android:layout_marginTop="30dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/volumeconverttype"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="Select Conversion Type" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/volumeinput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text=""
+        android:layout_below="@+id/volumetextinputlayout"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Volume Here"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="190dp" />
+
+    <TextView
+        android:id="@+id/volumeoutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_below="@id/volumeinput"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteY="461dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/volumeconvertbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/volumeoutput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:onClick="convertVolume"
+        android:text="Convert"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="370dp" />
+
+</RelativeLayout>

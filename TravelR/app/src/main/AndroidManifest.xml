@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.kshitijcan.travelr">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,8 +13,44 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TravelR"
+        android:theme="@style/Theme.MaterialComponents.NoActionBar"
         tools:targetApi="31">
+        <activity
+            android:name=".HappyBirthday"
+            android:exported="false" />
+        <activity
+            android:name=".PlannerGuide"
+            android:exported="false" />
+        <activity
+            android:name=".BucketList"
+            android:exported="false" />
+        <activity
+            android:name=".TravelPlanner"
+            android:exported="false" />
+        <activity
+            android:name=".TravelJournal"
+            android:exported="false" />
+        <activity
+            android:name=".TravelTips"
+            android:exported="false" />
+        <activity
+            android:name=".DistanceConvertor"
+            android:exported="false" />
+        <activity
+            android:name=".WeightConvertor"
+            android:exported="false" />
+        <activity
+            android:name=".VolumeConvertor"
+            android:exported="false" />
+        <activity
+            android:name=".CurrencyConvertor"
+            android:exported="false" />
+        <activity
+            android:name=".WorldClock"
+            android:exported="false" />
+        <activity
+            android:name=".HomeScreen"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

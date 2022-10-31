@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TravelTips"
+    android:padding="25dp">
+
+    <TextView
+        android:id="@+id/traveltiptext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster"
+        android:gravity="center"
+        android:text="Travel Tips"
+        android:textSize="48sp"
+        tools:layout_editor_absoluteX="147dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/traveltipsinputlayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/traveltiptext"
+        android:layout_marginTop="30dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/traveltipscountry"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="Select Country" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/gettipsbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Tips"
+        android:layout_below="@id/traveltipsinputlayout"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/traveltipslist"
+        android:layout_below="@id/gettipsbutton"
+        android:padding="30dp"
+        />
+</RelativeLayout>

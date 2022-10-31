@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="25dp"
+    android:backgroundTint="#C83030"
+    tools:context=".DistanceConvertor">
+
+    <TextView
+        android:id="@+id/distanceconvertertext"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="Distance Converter"
+        android:textSize="48sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/distancetextinputlayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distanceconvertertext"
+        android:layout_marginTop="10dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/distanceconverttype"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="Select Conversion Type" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/distanceinput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distancetextinputlayout"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Enter Distance Here"
+        android:inputType="number"
+        android:text=""
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="255dp" />
+
+    <TextView
+        android:id="@+id/distanceoutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distanceinput"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="25sp"
+        tools:layout_editor_absoluteY="444dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/distanceconvertbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distanceoutput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#635555"
+        android:onClick="distanceConvert"
+        android:text="Convert"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="366dp" />
+</RelativeLayout>
